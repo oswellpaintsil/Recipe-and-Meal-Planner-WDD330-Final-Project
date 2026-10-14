@@ -1,0 +1,232 @@
+/* ===== Design tokens (from the project proposal) ===== */
+:root {
+  --green: #2e5d45;
+  --green-dark: #1f4231;
+  --cream: #fff8e7;
+  --cream-dark: #f3e8cc;
+  --orange: #f4a340;
+  --orange-dark: #b45f06; /* accessible orange for text/focus on cream */
+  --text: #25302a;
+  --muted: #5b6a61;
+  --white: #ffffff;
+  --danger: #a32d2d;
+
+  --radius: 14px;
+  --shadow: 0 2px 8px rgb(46 93 69 / 14%);
+  --shadow-lg: 0 8px 22px rgb(46 93 69 / 22%);
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Typography ===== */
+h1,
+h2,
+h3 {
+  color: var(--green);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  margin: 1.5rem 0 0.75rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+a {
+  color: var(--green);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--orange-dark);
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+
+/* ===== Focus (keyboard friendly) ===== */
+:focus-visible {
+  outline: 3px solid var(--orange-dark);
+  outline-offset: 2px;
+}
+
+h1:focus {
+  outline: none;
+}
+
+/* ===== Utilities ===== */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -4rem;
+  background: var(--orange);
+  color: var(--green-dark);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* ===== Forms ===== */
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input,
+select {
+  font: inherit;
+  padding: 0.6rem 0.75rem;
+  border: 2px solid #9fb3a6;
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--text);
+  min-height: 44px;
+  width: 100%;
+}
+
+input[type='checkbox'] {
+  width: 1.4rem;
+  height: 1.4rem;
+  min-height: 0;
+  accent-color: var(--green);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1 1 200px;
+}
+
+.form-error {
+  color: var(--danger);
+  font-weight: 600;
+  min-height: 1.5em;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.6rem 1.2rem;
+  min-height: 44px;
+  border: 2px solid var(--green);
+  border-radius: 10px;
+  background: var(--cream);
+  color: var(--green);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  color: var(--green-dark);
+  background: var(--cream-dark);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: var(--cream);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--green-dark);
+  color: var(--white);
+}
+
+.btn-accent {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--green-dark);
+}
+
+.btn-accent:hover:not(:disabled) {
+  background: #e8921f;
+  color: var(--green-dark);
+}
+
+.btn-outline {
+  background: transparent;
+}
+
+.btn-small {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.link-btn {
+  background: none;
+  border: 0;
+  padding: 0.25rem 0;
+  font: inherit;
+  color: var(--green);
+  text-decoration: underline;
+  cursor: pointer;
+}
