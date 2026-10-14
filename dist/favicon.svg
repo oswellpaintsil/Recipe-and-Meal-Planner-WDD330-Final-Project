@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cooking pot with spoon">
+  <rect width="64" height="64" rx="14" fill="#2E5D45"/>
+  <path d="M14 30h36v10a12 12 0 0 1-12 12H26a12 12 0 0 1-12-12z" fill="#FFF8E7"/>
+  <rect x="10" y="27" width="44" height="5" rx="2.5" fill="#F4A340"/>
+  <path d="M14 34h-5M50 34h5" stroke="#FFF8E7" stroke-width="3" stroke-linecap="round"/>
+  <path d="M40 24c0-4 4-4 4-8M32 24c0-4 4-4 4-8" stroke="#F4A340" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M48 8 38 22" stroke="#F4A340" stroke-width="3" stroke-linecap="round"/>
+</svg>

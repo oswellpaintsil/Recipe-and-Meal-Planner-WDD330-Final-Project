@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover recipes, search by ingredient, plan your week of meals, keep a shopping list and look up packaged food products."
+    />
+    <meta name="theme-color" content="#2E5D45" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Recipe &amp; Meal Planner</title>
+    <script type="module" crossorigin src="./assets/index-6LcbJYZe.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DOnp0AaL.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#/">
+          <img src="./favicon.svg" alt="" width="36" height="36" />
+          <span>Recipe &amp; Meal Planner</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="#/" data-nav="/">Home</a></li>
+            <li><a href="#/categories" data-nav="/categories">Categories</a></li>
+            <li>
+              <a href="#/favorites" data-nav="/favorites"
+                >Favorites <span class="badge" id="fav-count" hidden>0</span></a
+              >
+            </li>
+            <li><a href="#/planner" data-nav="/planner">Planner</a></li>
+            <li>
+              <a href="#/shopping" data-nav="/shopping"
+                >Shopping <span class="badge" id="shop-count" hidden>0</span></a
+              >
+            </li>
+            <li><a href="#/products" data-nav="/products">Food Products</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div id="app" class="container"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          Recipe data from
+          <a href="https://www.themealdb.com/" target="_blank" rel="noopener">TheMealDB</a>
+          · Product data from
+          <a href="https://world.openfoodfacts.org/" target="_blank" rel="noopener"
+            >Open Food Facts</a
+          >
+        </p>
+        <p>WDD330 Final Project</p>
+      </div>
+    </footer>
+
+    <div id="toast-region" class="toast-region" role="status" aria-live="polite"></div>
+
+  </body>
+</html>
